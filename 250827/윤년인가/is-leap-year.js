@@ -14,5 +14,5 @@ if (year % 4 === 0) {
         console.log("true");
     }
 } else {
-    console.log("true");
+    console.log("false");
 }
