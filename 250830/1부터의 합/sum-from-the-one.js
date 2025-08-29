@@ -7,7 +7,7 @@ let sum = 0;
 for (let i=1; i<=100; i++) {
     if (sum < n) {
         sum += i;
-        console.log(sum);
+        // console.log(sum);
     } else {
         console.log(i-1);
         break;
