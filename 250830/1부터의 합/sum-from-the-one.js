@@ -5,11 +5,9 @@ const n = Number(input);
 let sum = 0;
 
 for (let i=1; i<=100; i++) {
-    if (sum < n) {
-        sum += i;
-        // console.log(sum);
-    } else {
-        console.log(i-1);
+    sum += i;
+    if (sum >= n) {
+        console.log(i);
         break;
     }
 }
