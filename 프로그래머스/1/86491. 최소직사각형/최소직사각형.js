@@ -1,10 +1,13 @@
 function solution(sizes) {
-    let w = [];
-    let h = [];
+    let maxW = 0;
+    let maxH = 0;
     
-    for (let i=0; i<sizes.length; i++) {
-        w.push(Math.max(...sizes[i]));
-        h.push(Math.min(...sizes[i]));
+    for (const [w, h] of sizes) {
+        const big = Math.max(w, h);
+        const small = Math.min(w, h);
+        
+        if (big > maxW) maxW = big;
+        if (small > maxH) maxH = small;
     }
-    return Math.max(...w)*Math.max(...h);
+    return maxW * maxH;
 }
